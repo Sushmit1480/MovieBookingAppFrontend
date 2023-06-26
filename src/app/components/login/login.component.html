@@ -1,0 +1,30 @@
+<div class="row justify-content-center mt-3">
+    <div class="col-12 col-md-4 mt-3">
+        <div class="card shadow">
+            <div class="container text-center">
+                <img src="/assets/password.png" style="width: 100px;" alt="loginImage" 
+                class="img-fluid mt-3">
+            </div> 
+            <h2 class="text-center">Login</h2>
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+                    <div class="form-group mb-3">
+                        <label for="email" class="form-label">Email ID:</label>
+                        <input type="email" class="form-control" [(ngModel)]="loginClass.email" name="email" id="email">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="password" class="form-label">Password:</label>
+                        <input type="password" class="form-control" [(ngModel)]="loginClass.password" name="password" id="password">
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="form-group btn btn-dark px-4">Login</button>
+                        <p class="mt-2">Don't have an account?<a routerLink="/register">Create one</a></p>
+                        <p class="mt-2">Forget Password?<a routerLink="/forgetPassword">reset</a></p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

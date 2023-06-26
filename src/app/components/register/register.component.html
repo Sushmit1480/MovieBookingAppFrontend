@@ -1,0 +1,56 @@
+<div class="row justify-content-center mt-3">
+    <div class="col-12 col-md-4 mt-3">
+        <div class="card shadow"> 
+            <div class="container text-center">
+                <img src="/assets/profile.png" style="width: 100px; border: 1px solid grey; padding: 1px;" alt="loginImage" 
+                class="img-fluid mt-3">
+            </div> 
+            <h2 class="text-center mt-2">Register</h2>
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group mb-3">
+                                <label for="firstName" class="form-label">First Name:</label>
+                                <input type="text" class="form-control" 
+                                [(ngModel)]="user.firstName" name="firstName" id="firstName">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group mb-3">
+                                <label for="lastName" class="form-label">Last Name:</label>
+                                <input type="text" class="form-control" 
+                                [(ngModel)]="user.lastName" name="lastName" id="lastName">
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="form-group mb-3">
+                        <label for="email" class="form-label">Email ID:</label>
+                        <input type="email" class="form-control" 
+                        [(ngModel)]="user.email" name="email" id="email">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="password" class="form-label">Password:</label>
+                        <input type="password" class="form-control" 
+                        [(ngModel)]="user.password" name="password" id="password">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm Password:</label>
+                        <input type="password" class="form-control" 
+                        [(ngModel)]="confirmPassword" name="confirmPassword" id="confirmPassword">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="contactNumber" class="form-label">Contact Number:</label>
+                        <input type="text" class="form-control" 
+                        [(ngModel)]="user.contactNumber" name="contactNumber" id="contactNumber">
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="form-group btn btn-dark px-4">Register</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
